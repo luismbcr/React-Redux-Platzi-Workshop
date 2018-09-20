@@ -2,6 +2,10 @@
 
 Fun app that consumes Rick and Morty API to show characters using React,Redux and Redux-thunk.
 
+## demo 
+
+[https://agitated-euclid-49ec17.netlify.com/](https://agitated-euclid-49ec17.netlify.com/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
