@@ -2,24 +2,29 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Character from './Character';
+import Spinner from 'react-spinkit';
 
 
-
-const HomeLayout = ({ characters }) => (
+const HomeLayout = ({ isLoading, characters }) => (
   <Container>
-    <Row>
-      {
 
-      characters.map(character =>
-        <Col sm="3">
-          <Character
-            key={character.id}
-            name={character.name}
-            image={character.image}
-          />
-        </Col>
-      )}
-    </Row>
+    {
+      isLoading
+        ? <Spinner name="ball-beat" />
+        : <Row>
+          {
+            characters.map(character =>
+              <Col sm="3" key={character.id}>
+                <Character
+                  key={character.id}
+                  name={character.name}
+                  image={character.image}
+                />
+              </Col>
+            )}
+        </Row>
+    }
+
   </Container>
 );
 
