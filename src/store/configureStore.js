@@ -11,10 +11,8 @@ const reducer = (state=initialState,action) =>{
         ...state,
         characters:  action.characters,
       }
-    break;
     default:
       return state
-      break;
   }
 };
 
