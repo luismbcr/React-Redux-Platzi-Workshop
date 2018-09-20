@@ -1,14 +1,15 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Card, CardImg, CardBody, CardTitle } from 'reactstrap';
 
 const Character = ({ name, image }) => (
-  <div>
-    <figure>
-      <img src={image} alt={name} />
-    </figure>
-    <h2>{name}</h2>
-  </div>
+    <Card className="mb-5">
+        <CardImg top width="100%" src={image} alt={name} />
+        <CardBody>
+          <CardTitle>{name}</CardTitle>
+        </CardBody>
+    </Card>
 );
 Character.propTypes = {
   name: PropTypes.string,

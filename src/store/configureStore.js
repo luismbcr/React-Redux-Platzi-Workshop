@@ -2,7 +2,8 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
 const initialState = {
-  characters: []
+  characters: [],
+  isLoading: true
 }
 const reducer = (state=initialState,action) =>{
   switch (action.type) {
@@ -10,11 +11,10 @@ const reducer = (state=initialState,action) =>{
       return {
         ...state,
         characters:  action.characters,
+        isLoading: false
       }
-    break;
     default:
       return state
-      break;
   }
 };
 
